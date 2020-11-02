@@ -3,11 +3,15 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Axios from 'axios'
+
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 Vue.prototype.$http = Axios;
-// Install BootstrapVue
+import { extend } from "vee-validate";
+import { required, min, email } from "vee-validate/dist/rules";
+extend("required", required);
+extend("min", min);
+extend("email", email);
 Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -16,7 +20,7 @@ if (token) {
   Vue.prototype.$http.defaults.headers.common['Authorization'] = token
 }
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   router,

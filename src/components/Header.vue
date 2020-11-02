@@ -28,6 +28,18 @@
             ><span v-if="isLoggedIn"> </span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill">
+            <router-link to="/content">Content</router-link
+            ><span v-if="isLoggedIn"> </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill">
+            <router-link to="/veeValidat">VeeValidat</router-link
+            ><span v-if="isLoggedIn"> </span>
+          </a>
+        </li>
         <a @click="logout">Logout</a>
       </ul>
     </div>
@@ -35,7 +47,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isLoggedIn : false
+    }
+  },
+      methods:{
+        logout() {
+          console.log();
+        }
+    }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

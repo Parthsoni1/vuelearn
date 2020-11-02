@@ -5,7 +5,9 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Login from './components/Login.vue'
 import Secure from './components/Secure.vue'
-import Register from './components/Register.vue'
+import Register from './components/Register.vue';
+import Content from './components/Content.vue';
+import VeeValidat from './components/VeeValidat.vue';
 
 Vue.use(Router)
 
@@ -39,6 +41,16 @@ let router = new Router({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/content',
+      name: 'content',
+      component: Content
+    },
+    {
+      path: '/veeValidat',
+      name: 'veeValidat',
+      component: VeeValidat
     }
   ]
 })
