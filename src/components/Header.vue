@@ -40,6 +40,12 @@
             ><span v-if="isLoggedIn"> </span>
           </a>
         </li>
+                <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill">
+            <router-link to="/agGrid">Ag Grid</router-link
+            ><span v-if="isLoggedIn"> </span>
+          </a>
+        </li>
         <a @click="logout">Logout</a>
       </ul>
     </div>

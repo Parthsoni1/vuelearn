@@ -8,6 +8,7 @@ import Secure from './components/Secure.vue'
 import Register from './components/Register.vue';
 import Content from './components/Content.vue';
 import VeeValidat from './components/VeeValidat.vue';
+import AgGrid from './components/Aggrid.vue';
 
 Vue.use(Router)
 
@@ -51,6 +52,11 @@ let router = new Router({
       path: '/veeValidat',
       name: 'veeValidat',
       component: VeeValidat
+    },
+    {
+      path: '/agGrid',
+      name: 'agGrid',
+      component: AgGrid
     }
   ]
 })

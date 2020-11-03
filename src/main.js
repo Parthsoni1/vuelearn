@@ -15,6 +15,7 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 const token = localStorage.getItem('user-token')
 if (token) {
   Vue.prototype.$http.defaults.headers.common['Authorization'] = token

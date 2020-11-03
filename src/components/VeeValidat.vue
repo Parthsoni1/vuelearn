@@ -46,7 +46,7 @@ export default {
     }
   },
   methods: {
-    onSubmit() {
+    handleSubmit() {
       alert("Form has been submitted!");
     },
   },
